@@ -128,9 +128,13 @@ p {
 
 a {
     color: #776e65;
-    font-weight: bold;
+    font-weight: normal;
     text-decoration: underline;
     cursor: pointer;
+}
+
+.a-bold {
+    font-weight: bold;
 }
 
 strong.important {

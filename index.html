@@ -33,8 +33,8 @@
         </div>
 
         <div class="above-game">
-            <p class="game-intro">Color mixing version of <strong>2048</strong> (<a style="font-weight:normal" href="https://github.com/Wazons/Color-mix-2048">Github</a>)</p>
-            <a class="restart-button">New Game</a>
+            <p class="game-intro">Color mixing version of <strong>2048</strong> (<a target="_blank" href="https://github.com/Wazons/Color-mix-2048">Github</a>)</p>
+            <a class="restart-button a-bold">New Game</a>
         </div>
 
         <div class="game-container">
@@ -80,8 +80,8 @@
 
 
         <div class="btnbox">
-            <a class="cbutton" id="btn1" onclick="bt1()">Light Mode</a>
-            <a class="cbutton active" id="btn2" onclick="bt2()">Pigment Mode</a>
+            <a class="cbutton a-bold" id="btn1" onclick="bt1()">Light Mode</a>
+            <a class="cbutton a-bold active" id="btn2" onclick="bt2()">Pigment Mode</a>
         </div>
 
         <p class="game-explanation">
@@ -89,7 +89,8 @@
         </p>
         <hr>
         <p>
-            <strong class="important">Note:</strong> This is the special version of 2048 game to help people feel the rules of color mixing. Adapter is Wazons from SJTU-Biox-Shanghai.
+            <strong class="important">Note:</strong> This is the special version of 2048 game to help people feel the rules of color mixing in <a target="_blank" href="http://2017.igem.org/Team:SJTU-BioX-Shanghai">iGEM 2017</a>. Adapter is Wazons from
+            <a target="_blank" href="http://igem.bio-x.cn">SJTU-Biox-Shanghai</a>.
         </p>
         <hr>
         <p>
@@ -113,17 +114,23 @@
     <script>
         var btn1 = $("#btn1");
         var btn2 = $("#btn2");
+        if (window.localStorage.rule == 0)
+            bt1();
+        else
+            bt2();
 
         function bt1() {
             btn1.addClass("active");
             btn2.removeClass("active");
             mergerule = 0;
+            window.localStorage.rule = 0;
         }
 
         function bt2() {
             btn2.addClass("active");
             btn1.removeClass("active");
             mergerule = 1;
+            window.localStorage.rule = 1;
         }
     </script>
 </body>
