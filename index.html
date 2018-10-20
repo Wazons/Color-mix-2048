@@ -107,6 +107,23 @@
     <script src="js/local_storage_manager.js"></script>
     <script src="js/game_manager.js"></script>
     <script src="js/application.js"></script>
+
+    <script>
+        var btn1 = $("#btn1");
+        var btn2 = $("#btn2");
+
+        function bt1() {
+            btn1.addClass("active");
+            btn2.removeClass("active");
+            mergerule = 0;
+        }
+
+        function bt2() {
+            btn2.addClass("active");
+            btn1.removeClass("active");
+            mergerule = 1;
+        }
+    </script>
 </body>
 
 </html>
